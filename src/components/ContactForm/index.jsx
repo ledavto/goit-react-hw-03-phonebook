@@ -9,6 +9,8 @@ export class ContactForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.addCont(this.state);
+    e.target.name.value = '';
+    e.target.number.value = '';
   };
 
   handleChange = ({ target: { name, value } }) => {
